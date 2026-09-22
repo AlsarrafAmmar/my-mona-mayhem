@@ -49,6 +49,11 @@ export default tseslint.config(
   },
   {
     files: ['**/*.astro'],
+    languageOptions: {
+      parserOptions: {
+        parser: tseslint.parser,
+      },
+    },
     plugins: {
       '@typescript-eslint': tseslint.plugin,
     },
