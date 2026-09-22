@@ -48,14 +48,14 @@ export default tseslint.config(
     },
   },
   {
-    files: ['*.astro/*.js', '**/*.astro/*.js'],
+    files: ['**/*.astro/*.js'],
     rules: {
       ...sharedRules,
       'no-unused-vars': ['error', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
     },
   },
   {
-    files: ['*.astro/*.ts', '**/*.astro/*.ts'],
+    files: ['**/*.astro/*.ts'],
     plugins: {
       '@typescript-eslint': tseslint.plugin,
     },
