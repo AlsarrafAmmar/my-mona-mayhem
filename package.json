@@ -22,6 +22,11 @@
     "globals": "15.15.0",
     "prettier": "3.9.8",
     "typescript": "5.9.3",
-    "typescript-eslint": "8.70.1"
+    "typescript-eslint": "7.18.0"
+  },
+  "overrides": {
+    "@typescript-eslint/scope-manager": "7.18.0",
+    "@typescript-eslint/types": "7.18.0",
+    "@typescript-eslint/visitor-keys": "7.18.0"
   }
 }
