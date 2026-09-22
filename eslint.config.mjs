@@ -47,5 +47,18 @@ export default tseslint.config(
       ],
     },
   },
+  {
+    files: ['**/*.astro'],
+    plugins: {
+      '@typescript-eslint': tseslint.plugin,
+    },
+    rules: {
+      'no-unused-vars': 'off',
+      '@typescript-eslint/no-unused-vars': [
+        'error',
+        { argsIgnorePattern: '^_', varsIgnorePattern: '^_' },
+      ],
+    },
+  },
   prettierConfig,
 );
