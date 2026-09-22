@@ -2,12 +2,29 @@
 
 # 🎮 Mona Mayhem
 
-**VS Code & GitHub Copilot CLI Workshop** — Build a GitHub Contribution Battle Arena
+> Build a retro GitHub Contribution Battle Arena with VS Code or GitHub Copilot CLI.
 
-A workshop template for building a retro arcade-themed website with Astro that compares GitHub contribution graphs of two users. This is the **starting point** — you'll build the app step by step using GitHub Copilot.
+Mona Mayhem is a hands-on workshop starter that helps you build an arcade-inspired Astro app where two GitHub contribution graphs face off. Instead of reading about Copilot features in the abstract, you'll use them to plan, scaffold, design, and polish a real project from scratch.
 
 ![Mona Mayhem Screenshot](https://github.com/user-attachments/assets/5eca79e2-cb9f-4e93-aa0d-23666ebde3b7)
 *What you'll build by the end of the workshop*
+
+## ✨ Why this repo is fun
+
+- **Build something playful** — turn GitHub activity into a head-to-head arcade-style showdown.
+- **Learn by shipping** — use Copilot to go from blank starter to working app in guided steps.
+- **Pick your workflow** — follow the workshop in **VS Code** or from the **Copilot CLI**.
+- **Practice real agent workflows** — planning, autonomous edits, parallel work, reviews, and polish.
+
+## 🧠 What you'll learn
+
+By the end of the workshop, you'll have practiced how to:
+
+- shape better prompts and workspace context
+- use planning modes before implementation
+- iterate with agentic coding workflows
+- refine UI and theme with design-first prompting
+- use parallelism and review loops to improve quality
 
 ## 📚 Workshop
 
@@ -34,7 +51,16 @@ The workshop supports two tracks — follow the one that matches your preferred 
 2. Choose your workshop path:
    - **VS Code:** clone your repo and open it in VS Code.
    - **GitHub Copilot CLI:** clone your repo locally, install `copilot`, and work from your terminal.
-3. Follow the [workshop guide](workshop/00-overview.md)
+3. Install dependencies with `npm install`
+4. Start the app locally with `npm run dev`
+5. Follow the [workshop guide](workshop/00-overview.md)
+
+## 🕹️ What you'll build
+
+- a retro-styled Astro frontend
+- an API route for fetching GitHub contribution data
+- a comparison flow for two GitHub usernames
+- a polished experience shaped with Copilot-driven iteration
 
 ## Prerequisites
 
