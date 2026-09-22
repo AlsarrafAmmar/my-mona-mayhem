@@ -21,6 +21,7 @@ function updateToggleIcon() {
   const isLight = document.documentElement.getAttribute('data-theme') === 'light';
   btn.textContent = isLight ? '🌙 Dark' : '☀️ Light';
   btn.setAttribute('aria-label', isLight ? 'Switch to dark theme' : 'Switch to light theme');
+  btn.setAttribute('aria-pressed', String(!isLight));
 }
 
 document.addEventListener('DOMContentLoaded', updateToggleIcon);

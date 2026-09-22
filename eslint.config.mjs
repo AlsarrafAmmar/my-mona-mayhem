@@ -18,7 +18,6 @@ export default tseslint.config(
     ignores: ['.astro/', 'dist/'],
   },
   js.configs.recommended,
-  ...tseslint.configs.recommended,
   ...astro.configs['flat/recommended'],
   {
     files: ['**/*.{js,mjs,cjs,ts,mts,cts,tsx}'],
@@ -32,6 +31,13 @@ export default tseslint.config(
   },
   {
     files: ['**/*.{ts,mts,cts,tsx}'],
+    languageOptions: {
+      globals: sharedGlobals,
+      parser: tseslint.parser,
+    },
+    plugins: {
+      '@typescript-eslint': tseslint.plugin,
+    },
     rules: {
       ...sharedRules,
       'no-unused-vars': 'off',
