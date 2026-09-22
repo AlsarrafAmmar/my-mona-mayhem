@@ -15,7 +15,7 @@ const sharedRules = {
 
 export default tseslint.config(
   {
-    ignores: ['.astro/', 'dist/'],
+    ignores: ['**/.astro/**', '**/dist/**'],
   },
   js.configs.recommended,
   ...astro.configs['flat/recommended'],
