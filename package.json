@@ -6,10 +6,27 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "lint": "eslint . --max-warnings=0",
+    "format": "prettier --write ."
   },
   "dependencies": {
     "@astrojs/node": "^10.1.4",
     "astro": "^6.4.8"
+  },
+  "devDependencies": {
+    "@eslint/js": "8.57.1",
+    "eslint": "8.57.1",
+    "eslint-config-prettier": "10.1.8",
+    "eslint-plugin-astro": "1.7.0",
+    "globals": "15.15.0",
+    "prettier": "3.9.8",
+    "typescript": "5.9.3",
+    "typescript-eslint": "7.18.0"
+  },
+  "overrides": {
+    "@typescript-eslint/scope-manager": "7.18.0",
+    "@typescript-eslint/types": "7.18.0",
+    "@typescript-eslint/visitor-keys": "7.18.0"
   }
 }
