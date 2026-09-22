@@ -19,7 +19,8 @@ function updateToggleIcon() {
   if (!btn) return;
 
   const isLight = document.documentElement.getAttribute('data-theme') === 'light';
-  btn.innerHTML = isLight ? '🌙 Dark' : '☀️ Light';
+  btn.textContent = isLight ? '🌙 Dark' : '☀️ Light';
+  btn.setAttribute('aria-label', isLight ? 'Switch to dark theme' : 'Switch to light theme');
 }
 
 document.addEventListener('DOMContentLoaded', updateToggleIcon);

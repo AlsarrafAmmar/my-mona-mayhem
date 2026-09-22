@@ -4,6 +4,15 @@ import astro from 'eslint-plugin-astro';
 import globals from 'globals';
 import tseslint from 'typescript-eslint';
 
+const sharedGlobals = {
+  ...globals.browser,
+  ...globals.node,
+};
+
+const sharedRules = {
+  'prefer-const': 'error',
+};
+
 export default tseslint.config(
   {
     ignores: ['.astro/', 'dist/'],
@@ -12,33 +21,24 @@ export default tseslint.config(
   ...tseslint.configs.recommended,
   ...astro.configs['flat/recommended'],
   {
-    files: ['**/*.{js,mjs,cjs}'],
+    files: ['**/*.{js,mjs,cjs,ts,mts,cts,tsx}'],
     languageOptions: {
-      globals: {
-        ...globals.browser,
-        ...globals.node,
-      },
+      globals: sharedGlobals,
     },
     rules: {
+      ...sharedRules,
       'no-unused-vars': ['error', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
-      'prefer-const': 'error',
     },
   },
   {
     files: ['**/*.{ts,mts,cts,tsx}'],
-    languageOptions: {
-      globals: {
-        ...globals.browser,
-        ...globals.node,
-      },
-    },
     rules: {
+      ...sharedRules,
       'no-unused-vars': 'off',
       '@typescript-eslint/no-unused-vars': [
         'error',
         { argsIgnorePattern: '^_', varsIgnorePattern: '^_' },
       ],
-      'prefer-const': 'error',
     },
   },
   prettierConfig,
